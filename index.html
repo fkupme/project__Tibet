@@ -28,8 +28,8 @@
 	</div>
 	<header class="header">
 		<div class="container">
-			<section class="header-area">
-				<button class="logo"><img src="svg/logo.svg" alt="" class="logo-img"><span
+			<div class="header-area">
+				<button type="button" class="logo"><img src="svg/logo.svg" alt="" class="logo-img"><span
 						class="visually-hidden"></span></button>
 				<nav class="menu">
 					<ul class="menu-list">
@@ -44,13 +44,13 @@
 				</nav>
 				<button class="burger"><img src="svg/burger.svg" alt="" class="burger-img"><span
 						class="visually-hidden"></span></button>
-			</section>
+			</div>
 			<div class="header-wrapper">
 				<h1 id="header__title" class="header__title">Насладись прогулкой в горы
 					с командой единомышленников</h1>
-				<section class="search">
+				<div class="search">
 					<label for="location" class="select-label ">
-						<select name="" id="location" class="select-field">
+						<select id="location" class="select-field">
 							<option value="location">Локация</option>
 							<option value="tibet">Тибет</option>
 							<option value="lake">Озеро</option>
@@ -62,7 +62,7 @@
 						<input id="date" class="select-field" type="date">
 						укажите диапазон</label>
 					<label for="team" class="select-label">
-						<select name="" id="team" class="select-field">
+						<select id="team" class="select-field">
 							<option value="">Участники</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
@@ -75,7 +75,7 @@
 						минимум 4 человека</label>
 
 					<button class="search__button">Найти программу</button>
-				</section>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -97,9 +97,11 @@
 					<button class="about__button main-button">Программа тура</button>
 				</div>
 				<div class="about-video">
-					<video poster="images/about-video.png" controls>
-						<source src="#">
-					</video>
+					<div class="video-wrapper">
+						<video poster="images/about-video.png" controls class="video">
+							<source src="#">
+						</video>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -107,14 +109,14 @@
 			<div class="container offer-wrapper">
 				<div class="offer-box">
 					<p class="offer__category main-category">наше предложение</p>
-					<h2 class="offer__title main-title">Лучшие программы для тебя</h2>
+					<h2 class="offer__title main-title"><a href="#" class="offer-link">Лучшие программы для тебя</a></h2>
 					<p class="offer__text main-text">Его корни уходят в один фрагмент классической латыни 45 года
 						н.э.,
 						то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
 					<article class="offer-condition">
 						<img src="svg/guide.svg" alt="" class="condition__icon">
 						<div class="condition__text">
-							<h3 class="condition__title">Опытный гид</h3>
+							<h3 class="condition__title"><a href="#" class="condition-link">Опытный гид</a></h3>
 							<p class="condition__description">Для современного мира базовый вектор развития
 								предполагает
 								независимые способы реализации соответствующих условий активизации.</p>
@@ -123,7 +125,7 @@
 					<article class="offer-condition">
 						<img src="svg/safe.svg" alt="" class="condition__icon">
 						<div class="condition__text">
-							<h3 class="condition__title">Безопасный поход</h3>
+							<h3 class="condition__title"><a href="#" class="condition-link">Безопасный поход</a></h3>
 							<p class="condition__description">Для современного мира базовый вектор развития
 								предполагает
 								независимые способы реализации соответствующих условий активизации.</p>
@@ -132,7 +134,7 @@
 					<article class="offer-condition">
 						<img src="svg/price.svg" alt="" class="condition__icon">
 						<div class="condition__text">
-							<h3 class="condition__title">Лояльные цены</h3>
+							<h3 class="condition__title"><a href="#" class="condition-link">Лояльные цены</a></h3>
 							<p class="condition__description">Для современного мира базовый вектор развития
 								предполагает
 								независимые способы реализации соответствующих условий активизации.</p>
