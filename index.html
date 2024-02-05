@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>РумТибет</title>
-	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" media="(max-width: 1023px)">
 	<script src="libs/swiper/swiper-bundle.min.js " defer></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/reset.css">
@@ -14,28 +14,75 @@
 </head>
 
 <body>
+	<div class="popup">
+		<div class="popup-wrapper">
+			<button type="button" class="popup-button"><img src="svg/close_icon.svg" alt=""></button>
+			<ul class="popup-list">
+				<li class="popup-list__item"><a href="#" class="popup-list__link">Про гида</a></li>
+				<li class="popup-list__item"><a href="#" class="popup-list__link">Программа тура</a></li>
+				<li class="popup-list__item"><a href="#" class="popup-list__link">Стоимость</a></li>
+				<li class="popup-list__item"><a href="#" class="popup-list__link">Блог</a></li>
+				<li class="popup-list__item"><a href="#" class="popup-list__link">Контакты</a></li>
+			</ul>
+		</div>
+	</div>
 	<header class="header">
 		<div class="container">
 			<section class="header-area">
 				<button class="logo"><img src="svg/logo.svg" alt="" class="logo-img"><span
 						class="visually-hidden"></span></button>
+				<nav class="menu">
+					<ul class="menu-list">
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Главная</a></li>
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Про гида</a></li>
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Программа тура</a></li>
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Стоимость</a></li>
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Блог</a></li>
+						<li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
+					</ul>
+					<button class="consultation main-button">Консультация</button>
+				</nav>
 				<button class="burger"><img src="svg/burger.svg" alt="" class="burger-img"><span
 						class="visually-hidden"></span></button>
 			</section>
-			<h1 id="header__title" class="header__title">Насладись прогулкой в горы
-				с командой единомышленников</h1>
-			<section class="search">
-				<select name="" id="" class="select-field"></select>
-				<input class="select-field" type="date">
-				<select name="" id="" class="select-field"></select>
-				<button class="search__button">Найти программу</button>
-			</section>
+			<div class="header-wrapper">
+				<h1 id="header__title" class="header__title">Насладись прогулкой в горы
+					с командой единомышленников</h1>
+				<section class="search">
+					<label for="location" class="select-label ">
+						<select name="" id="location" class="select-field">
+							<option value="location">Локация</option>
+							<option value="tibet">Тибет</option>
+							<option value="lake">Озеро</option>
+							<option value="yoga">Йога</option>
+						</select>
+						выберите из списка
+					</label>
+					<label for="date" class="select-label">
+						<input id="date" class="select-field" type="date">
+						укажите диапазон</label>
+					<label for="team" class="select-label">
+						<select name="" id="team" class="select-field">
+							<option value="">Участники</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						минимум 4 человека</label>
+
+					<button class="search__button">Найти программу</button>
+				</section>
+			</div>
 		</div>
 	</header>
 	<main class="main">
 
 		<section class="about">
-			<div class="container">
+			<div class="container about-container">
 
 				<div class="about-box">
 					<p class="about__category main-category">о нашем походе</p>
@@ -57,7 +104,7 @@
 			</div>
 		</section>
 		<section class="offer">
-			<div class="container">
+			<div class="container offer-wrapper">
 				<div class="offer-box">
 					<p class="offer__category main-category">наше предложение</p>
 					<h2 class="offer__title main-title">Лучшие программы для тебя</h2>
@@ -111,26 +158,27 @@
 				<h2 class="trends__title main-title">Лучшие программы для тебя</h2>
 				<div class="trends-swiper swiper">
 					<div class="trends-slider swiper-container">
-						<div class="trends-slider__wrapper swiper-wrapper">
+						<div class="trends-slider__wrapper swiper-wrapper trends-wrapper">
 							<div class="trend-slider__slide swiper-slide">
 								<article class="trend trend_1">
-									<a href="#" class="trend-link">
+									<a href="#" class="trend-link trend-link_1">
 										<div class="trend-rating">
 											<img src="svg/star.svg" alt="" class="trend-rating__icon">
 											<p class="trend-rating__number">4.9</p>
 										</div>
 										<div class="trend-description">
-											<p class="trend-description__text">Его корни уходят в один фрагмент
-												классической латыни 45
-												года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
-												профессор латыни из
-												колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных
-												слов в Lorem Ipsum,
-												"consectetur"и занялся его поисками в классической латинской литературе.
+											<p class="trend-description__text trend-description__text_1">Добро пожаловать в наше уединенное
+												убежище среди горных вершин! Отправляйтесь в увлекательное путешествие к
+												кристально чистым озерам, окруженным величественными горами. Насладитесь
+												неповторимой красотой природы, уютом уютных коттеджей и разнообразием
+												активного отдыха.
 											</p>
 										</div>
 										<div class="trend-name-price">
-											<h3 class="trend-name-price__title">Озеро горное озеро</h3>
+											<div class="name-wrapper">
+												<h3 class="trend-name-price__title">Горное озеро</h3>
+												<p class="name-text">романтическое приключение</p>
+											</div>
 											<button class="trend-name-price__button">480 $</button>
 										</div>
 									</a>
@@ -138,23 +186,24 @@
 							</div>
 							<div class="trend-slider__slide swiper-slide">
 								<article class="trend trend_2">
-									<a href="#" class="trend-link">
+									<a href="#" class="trend-link trend-link_2">
 										<div class="trend-rating">
 											<img src="svg/star.svg" alt="" class="trend-rating__icon">
 											<p class="trend-rating__number">4.9</p>
 										</div>
 										<div class="trend-description">
-											<p class="trend-description__text">Его корни уходят в один фрагмент
-												классической латыни 45
-												года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
-												профессор латыни из
-												колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных
-												слов в Lorem Ipsum,
-												"consectetur"и занялся его поисками в классической латинской литературе.
+											<p class="trend-description__text trend-description__text_2">Откройте для себя волшебство звездного
+												неба, выходящего за пределы воображения. Наши экскурсии по ночным тропам
+												позволят вам насладиться видом млечного пути и увидеть звезды во всей
+												своей красе. Профессиональные астрономы помогут вам разгадать тайны
+												космоса.
 											</p>
 										</div>
 										<div class="trend-name-price">
-											<h3 class="trend-name-price__title">Ночь в горах</h3>
+											<div class="name-wrapper">
+												<h3 class="trend-name-price__title">Ночь в горах</h3>
+												<p class="name-text">в компании друзей</p>
+											</div>
 											<button class="trend-name-price__button">500 $</button>
 										</div>
 									</a>
@@ -162,31 +211,29 @@
 							</div>
 							<div class="trend-slider__slide swiper-slide">
 								<article class="trend trend_3">
-									<a href="#" class="trend-link">
+									<a href="#" class="trend-link trend-link_3">
 										<div class="trend-rating">
 											<img src="svg/star.svg" alt="" class="trend-rating__icon">
 											<p class="trend-rating__number">4.9</p>
 										</div>
 										<div class="trend-description">
-											<p class="trend-description__text">Его корни уходят в один фрагмент
-												классической латыни 45
-												года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
-												профессор латыни из
-												колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных
-												слов в Lorem Ipsum,
-												"consectetur"и занялся его поисками в классической латинской литературе.
+											<p class="trend-description__text trend-description__text_3">Добро пожаловать в уединенное убежище, где
+												вы сможете проникнуться гармонией и спокойствием, практикуя йогу среди
+												величественных горных вершин.
 											</p>
 										</div>
 										<div class="trend-name-price">
-											<h3 class="trend-name-price__title">Йога в горах</h3>
+											<div class="name-wrapper">
+												<h3 class="trend-name-price__title">Йога в горах</h3>
+												<p class="name-text">для тех, кто забоится о себе</p>
+											</div>
 											<button class="trend-name-price__button">230 $</button>
 										</div>
 									</a>
 								</article>
 							</div>
+
 						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
 						<div class="swiper-pagination"></div>
 					</div>
 				</div>
@@ -199,9 +246,16 @@
 				<h2 class="blog__title main-title">Блог о путешествиях</h2>
 				<div class="blog-swiper swiper">
 					<div class="blog-slider swiper-container">
-						<div class="blog-slider__wrapper swiper-wrapper">
+						<div class="blog-slider__wrapper swiper-wrapper blog-cards">
 							<article class="blog-card blog-slider__slide swiper-slide">
-								<div class="blog-card__image"><img src="images/blog-1.png" alt=""></div>
+								<div class="blog-card__image">
+									
+									<picture>
+										<source srcset="images/blog-1.png" media="(max-width: 1023px)" />
+										<source srcset="images/blog-1-desktop.png" media="(min-width: 1024px)" />
+										<img src="images/blog-1.png" alt="" class="blog-image">
+									</picture>
+								</div>
 								<div class="blog-card-text">
 									<h3 class="blog-card__title">Красивая Италя, какая она в реальности?</h3>
 									<p class="blog-card__description">Для современного мира базовый вектор развития
@@ -214,7 +268,13 @@
 								</div>
 							</article>
 							<article class="blog-card blog-slider__slide swiper-slide">
-								<div class="blog-card__image"><img src="images/blog-2.png" alt=""></div>
+								<div class="blog-card__image">
+									<picture>
+										<source srcset="images/blog-2.png" media="(max-width: 1023px)" />
+										<source srcset="images/blog-2-desktop.png" media="(min-width: 1024px)" />
+										<img src="images/blog-2.png" alt="" class="blog-image">
+									</picture>
+								</div>
 								<div class="blog-card-text">
 									<h3 class="blog-card__title">Долой сомнения! Весь мир открыт для вас!</h3>
 									<p class="blog-card__description">Для современного мира базовый вектор развития
@@ -227,7 +287,13 @@
 								</div>
 							</article>
 							<article class="blog-card blog-slider__slide swiper-slide">
-								<div class="blog-card__image"><img src="images/blog-3.png" alt=""></div>
+								<div class="blog-card__image">
+									<picture>
+										<source srcset="images/blog-3.png" media="(max-width: 1023px)" />
+										<source srcset="images/blog-3-desktop.png" media="(min-width: 1024px)" />
+										<img src="images/blog-3.png" alt="" class="blog-image">
+									</picture>
+								</div>
 								<div class="blog-card-text">
 									<h3 class="blog-card__title">Как подготовиться к путешествию в одиночку?</h3>
 									<p class="blog-card__description">Для современного мира базовый вектор развития
@@ -240,7 +306,13 @@
 								</div>
 							</article>
 							<article class="blog-card blog-slider__slide swiper-slide">
-								<div class="blog-card__image"><img src="images/blog-4.png" alt=""></div>
+								<div class="blog-card__image">
+									<picture>
+										<source srcset="images/blog-4.png" media="(max-width: 1023px)" />
+										<source srcset="images/blog-4-desktop.png" media="(min-width: 1024px)" />
+										<img src="images/blog-4.png" alt="" class="blog-image">
+									</picture>
+								</div>
 								<div class="blog-card-text">
 									<h3 class="blog-card__title">Индия ... летим?</h3>
 									<p class="blog-card__description">Для современного мира базовый вектор развития
@@ -253,8 +325,7 @@
 								</div>
 							</article>
 						</div>
-						<div class="swiper-button-prev blog-swiper-button-prev"></div>
-						<div class="swiper-button-next blog-swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</div>
@@ -266,66 +337,64 @@
 				<h2 class="gallery__title main-title">Блог о путешествиях</h2>
 				<div class="gallery-swiper swiper">
 					<div class="gallery-slider swiper-container">
-						
-							<ul class="gallery-list gallery-slider__wrapper swiper-wrapper">
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-1.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-1.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-2.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-2.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-3.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-3.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-4.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-4.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-5.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-5.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-								<li class="gallery-list__item gallery-slider__slide swiper-slide">
-									<a href="#" class="gallery-list__link">
-										<picture>
-											<source srcset="images\gallery-6.png" media="(max-width: 1199px)" />
-											<source srcset="" media="(min-width: 1200px)" />
-											<img src="images\gallery-6.png" alt="" class="gallery-list__image">
-										</picture>
-									</a>
-								</li>
-							</ul>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-pagination"></div>
+
+						<ul class="gallery-list gallery-slider__wrapper swiper-wrapper">
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-1.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-1-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-1.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-2.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-2-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-2.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-3.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-3-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-3.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-4.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-4-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-4.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-5.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-5-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-5.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+							<li class="gallery-list__item gallery-slider__slide swiper-slide">
+								<a href="#" class="gallery-list__link">
+									<picture>
+										<source srcset="images\gallery-6.png" media="(max-width: 1023px)" />
+										<source srcset="images\gallery-6-desktop.png" media="(min-width: 1024px)" />
+										<img src="images\gallery-6.png" alt="" class="gallery-list__image">
+									</picture>
+								</a>
+							</li>
+						</ul>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 				<button class="gallery__button main-button">Наш pinterest</button>
@@ -340,8 +409,10 @@
 					<h2 class="subscribe__title main-title">Блог о путешествиях</h2>
 					<form action="" class="subscribe-form">
 						<label for="field">Введите e-mail адрес</label>
-						<input id="field" type="email" class="subscribe__field" placeholder="name@domain.com" required>
-						<button class="subscribe__button main-button">Подписаться на новости</button>
+						<div class="subscribe-field-btn">
+							<input id="field" type="email" class="subscribe__field" placeholder="name@domain.com" required>
+							<button class="subscribe__button main-button">Подписаться на новости</button>
+						</div>
 						<p class="subscribe__conditions">подписываясь на новости, вы автоматически соглашаетесь с
 							<a href="#" class="conditions">условиями обработки персональных данных</a> и <a href="#"
 								class="conditions">правилами рекламных рассылок</a>
